@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<title>Teju &amp; Kiran – Wedding Invitation | శుభలేఖ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Noto+Serif+Telugu:wght@400;600&family=Ramaraja&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#fff6e6;--card:#fffdf7;--ink:#4a1626;--soft:#8a5d68;--maroon:#7a1530;--deep:#4a0a1c;--gold:#b8862c;--gold2:#e6bf6a;--line:#e5cd9a;--blush:#fbe7e2;--rose:#e3a9a4;--green:#3f7d4e}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0}
+body{background:var(--bg) radial-gradient(#ecd6a8 1px,transparent 1.2px) 0 0/22px 22px;color:var(--ink);font:400 19px/1.6 "Cormorant Garamond",Georgia,serif;overflow-x:hidden;-webkit-tap-highlight-color:transparent}
+body.lock{overflow:hidden;height:100vh}
+.te{font-family:"Ramaraja","Noto Serif Telugu",serif;font-weight:400;line-height:1.5}
+section{position:relative;padding:72px 24px;max-width:520px;margin:0 auto;text-align:center}
+h2{font:400 42px/1.1 "Great Vibes","Brush Script MT",cursive;color:var(--gold);margin-bottom:4px}
+.sub{font-size:20px;color:var(--maroon);margin-bottom:8px}
+p.sm{color:var(--soft);font-size:17px}
+.script{font-family:"Great Vibes","Brush Script MT",cursive;font-weight:400;line-height:1.1}
+.orn{display:flex;align-items:center;gap:12px;color:var(--gold);width:min(240px,60vw);margin:6px auto}
+.orn i{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.orn span{font-size:14px}
+#petals{position:fixed;inset:0;pointer-events:none;z-index:5;width:100%;height:100%}
+.toran{position:absolute;top:0;left:0;right:0;width:100%;height:74px;pointer-events:none}
+
+/* ---------- cover ---------- */
+#cover{position:fixed;inset:0;z-index:50;overflow-y:auto;overflow-x:hidden;display:flex;
+ background:radial-gradient(circle at 50% 38%,#9c1d3f 0%,#6e0f2a 55%,#3d0817 100%);color:#fbe9c8;
+ transition:transform 1.2s cubic-bezier(.7,0,.2,1),opacity .4s .9s;text-align:center}
+#cover.open{transform:translateY(-105%);opacity:0;pointer-events:none}
+#cover:before{content:"";position:fixed;inset:12px;border:1px solid var(--gold2);border-radius:6px;pointer-events:none;z-index:2}
+#cover:after{content:"";position:fixed;inset:19px;border:1px dashed #e6bf6a77;border-radius:3px;pointer-events:none;z-index:2}
+.mandala{position:fixed;inset:0;margin:auto;width:min(135vw,780px);height:min(135vw,780px);color:var(--gold2);opacity:.2;animation:spin 140s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cin{position:relative;z-index:3;margin:auto;padding:92px 30px 48px;display:flex;flex-direction:column;align-items:center;gap:6px;width:100%;max-width:520px}
+.cin .ganesha{font-size:17px;color:var(--gold2)}
+.cin .title{font-size:clamp(46px,15vw,66px);color:#fff1d2;text-shadow:0 2px 14px #00000055;margin-top:2px}
+.cin .eyebrow{font-size:13px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold2)}
+.cin .names{font-size:clamp(48px,15vw,70px);color:var(--gold2);text-shadow:0 2px 10px #0006;margin-top:4px}
+.cin .names small{display:block;font:italic 400 20px/1.2 "Cormorant Garamond",serif;color:#fbe9c8;letter-spacing:.2em;margin:2px 0}
+.cin .tn{font-size:22px;color:#fff1d2}
+.cin .cdate{font-weight:600;letter-spacing:.28em;font-size:18px;color:#fff1d2;margin-top:6px}
+.cin .fam{font-size:16px;font-style:italic;color:#f2d9a6;max-width:320px}
+.cin .orn{color:var(--gold2)}
+.seal{margin-top:14px;width:104px;height:104px;border-radius:50%;border:0;cursor:pointer;color:var(--deep);font:400 30px/1 "Ramaraja","Noto Serif Telugu",serif;
+ background:radial-gradient(circle at 35% 30%,#f7de9a,#c9972f 72%);box-shadow:0 10px 30px #0008,inset 0 0 0 5px #ffffff33,inset 0 0 0 9px #7a153033;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.07);box-shadow:0 14px 40px #000a,inset 0 0 0 5px #ffffff33,inset 0 0 0 9px #7a153033}}
+.cin .tap{font-size:14px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold2)}
+button:focus-visible,.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* ---------- hero ---------- */
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;padding-top:96px}
+#hero .toran{max-width:none}
+#hero .frame{border:1.5px solid var(--gold);outline:1px solid var(--line);outline-offset:8px;padding:54px 22px 44px;width:100%;background:linear-gradient(#fffdf7,#fff6e3);border-radius:200px 200px 14px 14px;position:relative;box-shadow:0 18px 50px #7a153022}
+#hero .frame:before{content:"";position:absolute;inset:7px;border:1px dashed var(--line);border-radius:194px 194px 8px 8px;pointer-events:none}
+#hero .om{font-size:19px;color:var(--maroon)}
+#hero .names{font-size:clamp(60px,19vw,88px);color:var(--maroon);margin:10px 0 6px}
+#hero .amp{font:italic 400 22px "Cormorant Garamond",serif;color:var(--gold);display:block;letter-spacing:.3em;margin:2px 0}
+#hero .par{font-size:16px;margin-top:10px}
+.hint{margin-top:26px;color:var(--soft);font-size:15px;letter-spacing:.2em;animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(6px)}}
+
+/* ---------- date ---------- */
+.datecard{position:relative;width:270px;height:215px;margin:22px auto 26px;border-radius:135px 135px 14px 14px;border:2px solid var(--gold);background:var(--card);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 12px 34px #b8862c30}
+.datecard .d{font:600 104px/1 "Cormorant Garamond",serif;color:var(--maroon);margin-top:6px}
+.datecard .m{font-size:22px;letter-spacing:.18em;color:var(--gold);font-weight:600}
+#scratch{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:grab;transition:opacity .8s}
+.cd{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:340px;margin:0 auto}
+.cd div{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 0}
+.cd b{display:block;font:600 30px/1 "Cormorant Garamond",serif;color:var(--maroon)}
+.cd span{font-size:13px;color:var(--soft);letter-spacing:.12em}
+
+/* ---------- events ---------- */
+.ev{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 22px;margin:18px 0;position:relative}
+.ev:before{content:"";position:absolute;inset:7px;border:1px dashed var(--line);border-radius:12px;pointer-events:none}
+.ev h3{font:400 38px "Great Vibes",cursive;color:var(--gold)}
+.ev .tn{font-size:19px;color:var(--maroon);margin-top:-2px}
+.ev .t{font-size:22px;font-weight:600;margin:6px 0 2px}
+.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+.btn{display:inline-block;font:600 17px "Cormorant Garamond",serif;text-decoration:none;color:var(--maroon);background:var(--blush);border:1px solid var(--rose);border-radius:999px;padding:10px 20px;cursor:pointer;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.pri{background:linear-gradient(135deg,#c9a24f,#a97c2b);color:#fff;border-color:transparent}
+
+/* ---------- family ---------- */
+.fam2{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 20px;display:grid;gap:20px;margin-top:18px}
+.fam2 b{display:block;font-weight:600;font-size:21px;line-height:1.3;color:var(--maroon)}
+.fam2 em{color:var(--soft);font-size:16px}
+.fam2 hr{border:0;height:1px;background:var(--line);width:40%;margin:0 auto}
+
+/* ---------- gallery ---------- */
+.dots{display:flex;gap:8px;justify-content:center}.dots i{width:8px;height:8px;border-radius:50%;background:var(--line);transition:.3s;cursor:pointer}.dots i.on{background:var(--gold);transform:scale(1.4)}
+.car{display:flex;align-items:center;gap:10px;max-width:360px;margin:20px auto 14px}
+.vp{flex:1;overflow:hidden;min-width:0;touch-action:pan-y}
+.track{display:flex;transition:transform .55s cubic-bezier(.3,.8,.2,1)}
+.ph{flex:0 0 100%;background:#fff;padding:10px 10px 40px;border-radius:4px;box-shadow:0 8px 22px #4a162626;position:relative;margin:0}
+.ph .img{aspect-ratio:1/1.1;border-radius:2px;display:grid;place-items:center;background-size:cover;background-position:center;color:#fff;font:40px "Great Vibes",cursive}
+.ph .cap{position:absolute;bottom:9px;left:0;right:0;font:italic 17px "Cormorant Garamond",serif;color:#6d4f5c}
+.nav{flex:0 0 40px;width:40px;height:40px;border-radius:50%;border:1px solid var(--gold);background:var(--card);color:var(--gold);font:600 26px/1 Georgia,serif;cursor:pointer;display:grid;place-items:center;padding-bottom:3px;transition:background .2s,transform .2s}
+.nav:hover{background:var(--blush)}.nav:active{transform:scale(.92)}
+
+/* ---------- blessing / song ---------- */
+.shloka{background:linear-gradient(160deg,#7a1530,#4a0a1c);color:#fbe9c8;border-radius:18px;padding:30px 22px;margin-top:18px;box-shadow:0 14px 34px #7a153040;position:relative}
+.shloka:before{content:"";position:absolute;inset:7px;border:1px solid #e6bf6a66;border-radius:12px;pointer-events:none}
+.shloka .te{font-size:21px;line-height:1.9;color:#fff1d2}
+.shloka p{font-size:15px;font-style:italic;color:#f2d9a6;margin-top:12px}
+.song{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px 22px;margin-top:18px}
+.song h3{font:400 34px "Great Vibes",cursive;color:var(--gold)}
+.song h3[lang="te"]{font:400 26px "Ramaraja","Noto Serif Telugu",serif;color:var(--maroon)}
+.song .tabs{display:flex;gap:8px;justify-content:center;margin:14px 0 18px}
+.song .tabs .btn{padding:6px 16px}
+.song .tabs .btn[aria-pressed="true"]{background:linear-gradient(135deg,#c9a24f,#a97c2b);color:#fff;border-color:transparent}
+.song .lyr{line-height:1.8}
+.song .lyr p{margin-bottom:16px}
+.song .lyr .ch{font-style:italic;color:var(--gold);font-weight:600}
+.song .lyr[lang="te"]{font-family:"Ramaraja","Noto Serif Telugu",serif;font-size:17px;line-height:2}
+
+/* ---------- guest / footer ---------- */
+.parch{background:linear-gradient(#fbf0d9,#f3e1bd);color:#5a3d2e;border-radius:6px 6px 50% 50%/6px 6px 22px 22px;padding:48px 30px 56px;box-shadow:0 0 0 10px #e6cf9f,0 16px 40px #5a3d2e33;position:relative}
+.parch:before,.parch:after{content:"";position:absolute;left:-14px;right:-14px;height:20px;border-radius:12px;background:linear-gradient(#d9b873,#b8862c)}
+.parch:before{top:-14px}.parch:after{bottom:-14px}
+.parch h2{font-size:48px}
+footer{padding:56px 24px 90px;text-align:center}
+footer .script{font-size:54px;color:var(--gold)}
+footer .te{color:var(--maroon);font-size:20px}
+
+.mus{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:14px;z-index:60;width:44px;height:44px;border-radius:50%;border:1px solid var(--gold);background:var(--card);color:var(--maroon);font:22px/1 Georgia,serif;cursor:pointer;box-shadow:0 4px 14px #4a162633;display:none}
+.mus.show{display:grid;place-items:center}
+.mus.off:after{content:"";position:absolute;width:26px;height:2px;background:var(--soft);transform:rotate(-45deg)}
+.toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,40px);background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:999px;opacity:0;transition:.3s;z-index:90;font-size:16px}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body class="lock">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<pattern id="tor" width="44" height="74" patternUnits="userSpaceOnUse">
+ <rect width="44" height="3" y="3" fill="#c9972f"/>
+ <path d="M22 9C9 24 12 52 22 70C32 52 35 24 22 9Z" fill="#3f7d4e"/>
+ <path d="M22 13V64" stroke="#2c5f3a" stroke-width="1"/>
+ <circle cx="22" cy="8" r="6.5" fill="#f2a516"/><circle cx="22" cy="8" r="3" fill="#d9620f"/>
+ <circle cx="0" cy="4.5" r="4" fill="#f2a516"/><circle cx="44" cy="4.5" r="4" fill="#f2a516"/>
+</pattern>
+</defs></svg>
+<canvas id="petals" aria-hidden="true"></canvas>
+<button class="mus off" id="mus" aria-label="Play music">♪</button>
+
+<div id="cover">
+  <div id="mandalaBox"></div>
+  <svg class="toran" aria-hidden="true"><rect width="100%" height="74" fill="url(#tor)"/></svg>
+  <div class="cin">
+    <p class="te ganesha">శ్రీ గణేశాయ నమః</p>
+    <div class="te title">శుభలేఖ</div>
+    <p class="eyebrow">Wedding Invitation</p>
+    <div class="orn" aria-hidden="true"><i></i><span>✦</span><i></i></div>
+    <div class="script names">Teju<small>weds</small>Kiran</div>
+    <p class="te tn">తేజు &nbsp;✦&nbsp; కిరణ్</p>
+    <p class="cdate">12 · 12 · 2026</p>
+    <p class="fam">With the blessings of the Komanapalli family</p>
+    <button class="seal" id="open" aria-label="Open invitation">శుభం</button>
+    <p class="tap">Tap to open</p>
+  </div>
+</div>
+
+<section id="hero">
+  <svg class="toran" aria-hidden="true"><rect width="100%" height="74" fill="url(#tor)"/></svg>
+  <div class="frame">
+    <p class="te om">శ్రీ గణేశాయ నమః</p>
+    <p class="te sub" style="font-size:18px;margin-top:8px">మా ఇంట జరుగు వివాహ మహోత్సవానికి<br>మిమ్మల్ని సాదరంగా ఆహ్వానిస్తున్నాము</p>
+    <p class="sm" style="margin-top:8px">With the blessings of elders and the grace of God, the family of<br>Late Sri Komanapalli Srinivas &amp; Smt. Hymavathi<br>joyfully invites you to the wedding of their daughter</p>
+    <div class="script names">Teju<span class="amp">WEDS</span>Kiran</div>
+    <p class="sm par">Daughter of Late Sri Komanapalli Srinivas<br>&amp; Smt. Hymavathi</p>
+    <div class="orn" aria-hidden="true"><i></i><span>✦</span><i></i></div>
+    <p class="sm par" style="margin-top:0">Son of Sri Meegada Malleswara Rao<br>&amp; Smt. Srilakshmi</p>
+  </div>
+  <p class="hint">scroll down ↓</p>
+</section>
+
+<section id="date">
+  <h2>Save the date</h2>
+  <p class="te sub">శుభ తేదీ</p>
+  <p class="sm">Revealing our date…</p>
+  <div class="datecard"><div class="m">DECEMBER</div><div class="d">12</div><div class="m" style="font-size:20px">Saturday 2026</div>
+    <canvas id="scratch" aria-label="Scratch to reveal the date"></canvas></div>
+  <div class="cd" id="cd"></div>
+</section>
+
+<section id="events">
+  <h2>Celebrations</h2>
+  <p class="te sub">వేడుకలు</p>
+  <p class="sm" id="guest">Join us for every moment</p>
+  <div id="evList"></div>
+</section>
+
+<section id="family">
+  <h2>With love from our families</h2>
+  <p class="te sub">మా కుటుంబాల ఆశీస్సులతో</p>
+  <div class="fam2">
+    <div><b>Late Sri Komanapalli Srinivas<br>&amp; Smt. Hymavathi</b><em>Bride’s Parents</em></div>
+    <div><b>Sri Meegada Malleswara Rao<br>&amp; Smt. Srilakshmi</b><em>Groom’s Parents</em></div>
+    <hr>
+    <div><b>Praveen Reddy &amp; Satya</b><em>Bride’s Brother in law &amp; Sister</em></div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Our moments</h2>
+  <p class="te sub">మా మధుర క్షణాలు</p>
+  <p class="sm">Swipe through our story</p>
+  <div class="car"><button class="nav" id="prev" aria-label="Previous photo">‹</button><div class="vp" id="vp"><div class="track" id="gal"></div></div><button class="nav" id="next" aria-label="Next photo">›</button></div>
+  <div class="dots" id="dots"></div>
+</section>
+
+<section id="song">
+  <h2>Mangalam</h2>
+  <p class="te sub">మంగళ ఆశీర్వచనం</p>
+  <div class="shloka">
+    <div class="te">మాంగల్యం తంతునానేన<br>మమ జీవన హేతునా<br>కంఠే బధ్నామి సుభగే<br>త్వం జీవ శరదాం శతమ్</div>
+    <p>“With this sacred thread, upon which my life depends, I tie it around your neck, O auspicious one — may you live a hundred autumns.”</p>
+  </div>
+  <p class="sm" style="margin-top:22px">Press ♪ at the top to play the music</p>
+  <div class="song">
+    <h3 id="songTitle" lang="te">రెండు హృదయాలు, ఒకే ఆరంభం</h3>
+    <div class="tabs">
+      <button class="btn" id="tTe" aria-pressed="true">తెలుగు</button>
+      <button class="btn" id="tEn" aria-pressed="false">English</button>
+    </div>
+    <div class="lyr" id="lTe" lang="te">
+      <p>డిసెంబర్ ఉదయపు వెలుగులో,<br>రెండు కథలు ఒకటయ్యే క్షణం.<br>ఒంటరిగా నడిచిన దారులన్నీ,<br>మనల్ని ఇక్కడికే చేర్చాయి.</p>
+      <p class="ch">తేజు – కిరణ్, చేయి చేయి కలిపి,<br>ఏడడుగులతో కొత్త బంధం.<br>ప్రతి ఆశీస్సు, ప్రతి ప్రార్థన,<br>మీరుంటే మా మనసే ఇల్లు.</p>
+      <p>పసుపు వెలుగు, మల్లెల పరిమళం,<br>మేళతాళాల సందడి వీధంతా.<br>దగ్గరివారూ, దూరపువారూ రండి,<br>ఆశీర్వదించండి మమ్మల్ని.</p>
+    </div>
+    <div class="lyr" id="lEn" lang="en" hidden>
+      <p>Under the morning light of December,<br>two little stories become one.<br>Every road we walked alone<br>was leading us here, to the sun.</p>
+      <p class="ch">Teju and Kiran, hand in hand,<br>seven steps to a promised land.<br>With every blessing, every prayer,<br>our hearts are home when you are there.</p>
+      <p>Turmeric glow and jasmine sweet,<br>drums and laughter fill the street.<br>Come and bless us, near and far,<br>you are the glow of who we are.</p>
+    </div>
+  </div>
+</section>
+
+<section id="guestsec">
+  <div class="parch">
+    <h2>Dear Guest</h2>
+    <p class="te" style="font-size:18px;color:var(--maroon)">మీ రాక మా వేడుకకు శోభ</p>
+    <p style="margin-top:8px">Your presence, blessings and love will make our celebration truly complete.</p>
+    <p style="margin-top:14px;font-style:italic">– Komanapalli family, Teju &amp; Kiran</p>
+    <div class="row">
+      <a class="btn pri" id="rsvp" target="_blank" rel="noopener">RSVP on WhatsApp</a>
+      <button class="btn" id="share">Share invite</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="script">Thank you</div>
+  <p class="te">ధన్యవాదాలు</p>
+  <p class="sm">We look forward to celebrating the day with you.</p>
+</footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ===== EDIT YOUR DETAILS HERE ===== */
+const C={whatsapp:"919652945247", // number with country code, no +
+ place:"Chiguru Function Hall, Karakata, Tadepalli",
+ events:[
+  {name:"Haldi",te:"పసుపు వేడుక",start:"2026-12-11T09:00:00+05:30",end:"2026-12-11T12:00:00+05:30",time:"Friday, 11 December 2026 · 9:00 AM"},
+  {name:"Wedding",te:"వివాహ మహోత్సవం",start:"2026-12-12T07:00:00+05:30",end:"2026-12-12T10:00:00+05:30",time:"Saturday, 12 December 2026 · 7:00 AM",
+   venue:"Chiguru Function Hall",addr:"Beside Manthena Satyanarayana Ashramam, Karakata, Tadepalli",map:1},
+  {name:"Lunch",te:"విందు భోజనం",start:"2026-12-12T12:00:00+05:30",end:"2026-12-12T15:00:00+05:30",time:"Saturday, 12 December 2026 · 12:00 PM"}],
+ photos:[
+  {src:"imageone.jpeg", cap:"Two hearts, one beautiful beginning"},
+  {src:"imagefour.jpeg", cap:"In every moment, I choose you"},
+  {src:"imagetwo.jpeg", cap:"Forever starts today"}
+],
+ // Optional: put your own Telugu song file next to this page and name it song.mp3.
+ // If the file is not there, the built-in Telugu wedding (nadaswaram-style) tune plays instead.
+ song:"audio.M4A"
+};
+/* =================================== */
+const $=s=>document.querySelector(s),q=encodeURIComponent,esc=s=>s.replace(/[&<>"]/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[m]));
+const D=new Date(C.events[1].start),g=d=>new Date(d).toISOString().replace(/[-:]|\.\d{3}/g,"");
+const mapUrl="https://www.google.com/maps/search/?api=1&query=GH57%2BGPM%2C+Karakatta+Rd%2C+Tadepalle%2C+Venkatapalem%2C+Amaravati%2C+Andhra+Pradesh+522501";
+
+/* mandala behind the cover */
+(function(){let s='<svg viewBox="-100 -100 200 200" class="mandala" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width=".7">';
+ [[16,95,10,0],[12,72,12,7],[8,48,14,11]].forEach(([n,L,W,o])=>{for(let i=0;i<n;i++)s+=`<path transform="rotate(${i*360/n+o})" d="M0 -${L*.25}C${W} -${L*.5} ${W*.8} -${L*.8} 0 -${L}C-${W*.8} -${L*.8} -${W} -${L*.5} 0 -${L*.25}Z"/>`});
+ s+='<circle r="14"/><circle r="8"/><circle r="97"/></g></svg>';$("#mandalaBox").innerHTML=s})();
+
+$("#evList").innerHTML=C.events.map(e=>`<div class="ev"><h3>${esc(e.name)}</h3><div class="te tn">${esc(e.te||"")}</div><div class="t">${esc(e.time)}</div>${e.venue?`<div>${esc(e.venue)}</div><p class="sm">${esc(e.addr)}</p>`:""}<div class="row">
+${e.map?`<a class="btn pri" target="_blank" rel="noopener" href="${mapUrl}">Open map</a>`:""}
+<a class="btn" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=${q("Teju & Kiran – "+e.name)}&dates=${g(e.start)}/${g(e.end)}&location=${q(C.place)}">Add to calendar</a></div></div>`).join("");
+const tints=["#e9b7c0","#a8b99f","#e8c98f","#c7b3d6"];
+$("#gal").innerHTML=C.photos.map((p,i)=>`<figure class="ph"><div class="img" style="${p.src?`background-image:url(${p.src})`:`background:linear-gradient(160deg,${tints[i%4]},#fff3)`}">${p.src?"":"♡"}</div><figcaption class="cap">${esc(p.cap)}</figcaption></figure>`).join("");
+C.photos.forEach((p,i)=>{if(!p.src)return;const im=new Image();im.onerror=()=>{const el=$("#gal").children[i].querySelector(".img");el.style.cssText=`background:linear-gradient(160deg,${tints[i%4]},#fff3)`;el.textContent="♡"};im.src=p.src});
+$("#dots").innerHTML=C.photos.map(()=>"<i></i>").join("");
+const gal=$("#gal"),dots=[...document.querySelectorAll("#dots i")];let cur=0;
+function go(i){cur=(i+C.photos.length)%C.photos.length;gal.style.transform=`translateX(${-cur*100}%)`;dots.forEach((d,k)=>d.classList.toggle("on",k===cur))}
+$("#prev").onclick=()=>go(cur-1);$("#next").onclick=()=>go(cur+1);dots.forEach((d,k)=>d.onclick=()=>go(k));
+let sx0=0;$("#vp").addEventListener("touchstart",e=>{sx0=e.touches[0].clientX},{passive:true});
+$("#vp").addEventListener("touchend",e=>{const dx=e.changedTouches[0].clientX-sx0;if(Math.abs(dx)>40)go(cur+(dx<0?1:-1))});go(0);
+const gn=decodeURIComponent(location.hash.slice(1)).replace(/[-_]/g," ").trim();
+if(gn)$("#guest").textContent="Dear "+gn.replace(/\b\w/g,c=>c.toUpperCase())+", join us for every moment";
+$("#rsvp").href=`https://wa.me/${C.whatsapp}?text=${q("Hi! I’ll be joining Teju & Kiran’s wedding 💐")}`;
+function toast(t){const e=$("#toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),2200)}
+$("#share").onclick=async()=>{const u=location.href;try{if(navigator.share){await navigator.share({title:document.title,url:u});return}}catch(e){return}
+ try{await navigator.clipboard.writeText(u);toast("Link copied")}catch(e){toast("Copy the link from your address bar")}};
+function tick(){let s=Math.max(0,Math.floor((D-Date.now())/1000));
+ $("#cd").innerHTML=[["days",86400],["hours",3600],["minutes",60],["seconds",1]].map(([l,n])=>{const x=Math.floor(s/n);s-=x*n;return `<div><b>${String(x).padStart(2,"0")}</b><span>${l}</span></div>`}).join("")}
+tick();setInterval(tick,1000);
+/* lyrics language toggle (Telugu first) */
+function lang(l){const te=l==="te";$("#lEn").hidden=te;$("#lTe").hidden=!te;
+ $("#tEn").setAttribute("aria-pressed",!te);$("#tTe").setAttribute("aria-pressed",te);
+ $("#songTitle").textContent=te?"రెండు హృదయాలు, ఒకే ఆరంభం":"Two Hearts, One Beginning";
+ $("#songTitle").lang=te?"te":"en"}
+$("#tEn").onclick=()=>lang("en");$("#tTe").onclick=()=>lang("te");
+/* petals */
+const pc=$("#petals"),px=pc.getContext("2d");let P=[],on=false;
+function rs(){pc.width=innerWidth*devicePixelRatio;pc.height=innerHeight*devicePixelRatio}rs();addEventListener("resize",rs);
+function mk(y){return{x:Math.random()*pc.width,y:y??-20,r:(5+Math.random()*7)*devicePixelRatio,v:(.5+Math.random())*devicePixelRatio,w:Math.random()*6,s:Math.random()*.02+.01,c:["#f2a516","#e8860c","#f3b6c1","#fff1d2"][Math.floor(Math.random()*4)]}}
+function loop(){px.clearRect(0,0,pc.width,pc.height);P.forEach(p=>{p.y+=p.v;p.w+=p.s;p.x+=Math.sin(p.w)*1.1;
+ px.save();px.translate(p.x,p.y);px.rotate(p.w);px.fillStyle=p.c;px.globalAlpha=.8;px.beginPath();px.ellipse(0,0,p.r,p.r/1.8,0,0,7);px.fill();px.restore();
+ if(p.y>pc.height+20)Object.assign(p,mk())});requestAnimationFrame(loop)}
+function burst(n){if(matchMedia("(prefers-reduced-motion:reduce)").matches)return;for(let i=0;i<n;i++)P.push(mk(Math.random()*-pc.height));if(!on){on=true;loop()}}
+
+/* ===== Music =====
+   1) If C.song (song.mp3) exists next to this page, that Telugu song plays.
+   2) Otherwise a built-in Telugu wedding tune plays: nadaswaram-style melody in raga Mohanam
+      over a tanpura drone and a dolu/tavil-style rhythm (all generated in the browser). */
+const Music=(()=>{
+ const AC=window.AudioContext||window.webkitAudioContext,BPM=96,B=60/BPM,ROOT=62,mf=n=>440*Math.pow(2,(n-69)/12);
+ /* Mohanam: S R2 G3 P D2 = 0 2 4 7 9 (+12) ; each phrase is 8 beats */
+ const PH=[
+  [[4,1],[7,1],[9,1],[12,1],[9,.5],[7,.5],[9,1],[7,1],[4,1]],
+  [[12,1],[14,1],[16,1],[14,.5],[12,.5],[9,1],[7,1],[9,1],[7,1]],
+  [[4,1],[2,.5],[4,.5],[7,1],[4,1],[2,1],[0,1],[2,1],[4,1]],
+  [[7,1],[9,1],[12,1],[9,1],[7,1],[4,1],[2,.5],[0,.5],[0,1]]];
+ const M={};let bt=0,pv=null;PH.forEach(p=>p.forEach(([n,d])=>{M[bt*2]={n,d,pv};pv=n;bt+=d}));const LOOP=bt*2;
+ let ctx,out,nz,tm,nx=0,st=0,el,pl=false,synth=!C.song;const b=$("#mus");
+ function init(){ctx=new AC();const comp=ctx.createDynamicsCompressor();comp.connect(ctx.destination);
+  out=ctx.createGain();out.gain.value=.8;out.connect(comp);
+  const d=ctx.createDelay(1),f=ctx.createGain(),w=ctx.createGain();d.delayTime.value=B*.75;f.gain.value=.32;w.gain.value=.3;
+  out.connect(d);d.connect(f);f.connect(d);d.connect(w);w.connect(comp);
+  nz=ctx.createBuffer(1,Math.floor(ctx.sampleRate*.2),ctx.sampleRate);const a=nz.getChannelData(0);for(let i=0;i<a.length;i++)a[i]=Math.random()*2-1}
+ function reed(t,n,d,p){const f=mf(ROOT+n),len=d*B,g=ctx.createGain(),lp=ctx.createBiquadFilter(),lfo=ctx.createOscillator(),lg=ctx.createGain();
+  lp.type="lowpass";lp.frequency.value=2600;lp.Q.value=4;
+  lfo.frequency.value=5.2;lg.gain.setValueAtTime(0,t);lg.gain.linearRampToValueAtTime(16,t+Math.min(.3,len));lfo.connect(lg);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(.11,t+.035);g.gain.setValueAtTime(.11,t+Math.max(.04,len-.1));g.gain.linearRampToValueAtTime(.0001,t+len+.04);
+  [-7,7].forEach(c=>{const o=ctx.createOscillator();o.type="sawtooth";o.detune.value=c;
+   if(p!==null&&p!==n&&Math.abs(p-n)<=5){o.frequency.setValueAtTime(mf(ROOT+p),t);o.frequency.exponentialRampToValueAtTime(f,t+.07)}else o.frequency.value=f;
+   lg.connect(o.detune);o.connect(lp);o.start(t);o.stop(t+len+.08)});
+  lfo.start(t);lfo.stop(t+len+.08);lp.connect(g);g.connect(out)}
+ function pluck(t,n,v){const o=ctx.createOscillator(),lp=ctx.createBiquadFilter(),g=ctx.createGain();o.type="sawtooth";o.frequency.value=mf(n);
+  lp.type="lowpass";lp.frequency.setValueAtTime(1500,t);lp.frequency.exponentialRampToValueAtTime(300,t+1.6);
+  g.gain.setValueAtTime(0,t);g.gain.linearRampToValueAtTime(v,t+.01);g.gain.exponentialRampToValueAtTime(.0001,t+2.6);
+  o.connect(lp);lp.connect(g);g.connect(out);o.start(t);o.stop(t+2.7)}
+ function boom(t,v){const o=ctx.createOscillator(),g=ctx.createGain();o.frequency.setValueAtTime(150,t);o.frequency.exponentialRampToValueAtTime(55,t+.15);
+  g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.0001,t+.35);o.connect(g);g.connect(out);o.start(t);o.stop(t+.4)}
+ function tk(t,v){const s=ctx.createBufferSource(),f=ctx.createBiquadFilter(),g=ctx.createGain();s.buffer=nz;f.type="bandpass";f.frequency.value=2800;f.Q.value=1.5;
+  g.gain.setValueAtTime(v,t);g.gain.exponentialRampToValueAtTime(.0001,t+.06);s.connect(f);f.connect(g);g.connect(out);s.start(t);s.stop(t+.08)}
+ function sch(){while(nx<ctx.currentTime+.5){const e=M[st%LOOP],p=st%16,k=st%8;
+  if(e)reed(nx,e.n,e.d,e.pv);
+  if(p==0||p==8)boom(nx,.34);if(p==6)boom(nx,.18);
+  if(p==2||p==4||p==10||p==12||p==14)tk(nx,.1);if(p==5||p==13)tk(nx,.05);
+  if(k==0)pluck(nx,ROOT-17,.05);if(k==2||k==4)pluck(nx,ROOT-12,.04);if(k==6)pluck(nx,ROOT-24,.06);
+  nx+=B/2;st++}}
+ function startSynth(){if(!AC)return;if(!ctx)init();ctx.resume();nx=ctx.currentTime+.1;st=0;clearInterval(tm);tm=setInterval(sch,100);synth=true}
+ function ui(){b.classList.toggle("off",!pl);b.setAttribute("aria-label",pl?"Pause music":"Play music")}
+ function play(){pl=true;ui();
+  if(synth){startSynth();return}
+  el=el||Object.assign(new Audio(C.song),{loop:true,volume:.7});
+  const r=el.play();if(r&&r.catch)r.catch(e=>{if(e&&e.name==="NotAllowedError")return;el=null;if(pl)startSynth()})}
+ function stop(){pl=false;ui();if(el)el.pause();clearInterval(tm);if(ctx)ctx.suspend()}
+ b.onclick=()=>pl?stop():play();
+ document.addEventListener("visibilitychange",()=>{if(document.hidden&&pl){stop();b.dataset.a=1}else if(!document.hidden&&b.dataset.a){delete b.dataset.a;play()}});
+ return{start(){b.classList.add("show");play()}}})();
+$("#open").onclick=()=>{$("#cover").classList.add("open");document.body.classList.remove("lock");P=[];burst(34);Music.start()};
+
+/* scratch to reveal the date */
+const sc=$("#scratch"),sx=sc.getContext("2d");let draw=false,done=false;
+function initS(){const r=sc.getBoundingClientRect();sc.width=r.width;sc.height=r.height;
+ const gr=sx.createLinearGradient(0,0,r.width,r.height);gr.addColorStop(0,"#d9b873");gr.addColorStop(.5,"#f3e2b0");gr.addColorStop(1,"#b8862c");
+ sx.fillStyle=gr;sx.fillRect(0,0,r.width,r.height);sx.fillStyle="#6e0f2a";sx.font='600 17px "Cormorant Garamond",serif';sx.textAlign="center";
+ sx.fillText("OUR SPECIAL DAY",r.width/2,r.height/2);sx.fillText("♡  ✦  ♡",r.width/2,r.height/2+26)}
+initS();document.fonts&&document.fonts.ready.then(()=>{if(!done)initS()});
+function sp(e){const r=sc.getBoundingClientRect();sx.globalCompositeOperation="destination-out";sx.beginPath();sx.arc(e.clientX-r.left,e.clientY-r.top,22,0,7);sx.fill()}
+function chk(){if(done)return;const d=sx.getImageData(0,0,sc.width,sc.height).data;let c=0;for(let i=3;i<d.length;i+=64)if(d[i]<20)c++;
+ if(c/(d.length/64)>.5)reveal()}
+let auto=false,started=false;
+function reveal(){if(done)return;done=true;sc.style.opacity=0;sc.style.pointerEvents="none";burst(30);if(navigator.vibrate)navigator.vibrate(30)}
+function autoScratch(){if(started||done)return;started=true;auto=true;
+ if(matchMedia("(prefers-reduced-motion:reduce)").matches){reveal();return}
+ const w=sc.width,h=sc.height,rows=7,t0=performance.now(),dur=2600;
+ (function step(now){if(!auto||done)return;const k=Math.min(1,(now-t0)/dur);
+  const row=Math.min(rows-1,Math.floor(k*rows)),f=k*rows-row;
+  const y=(row+.5)*h/rows,x=row%2?w*(1-f):w*f;
+  sx.globalCompositeOperation="destination-out";
+  for(let i=0;i<3;i++){sx.beginPath();sx.arc(x,y+(i-1)*14,24,0,7);sx.fill()}
+  if(k<1)requestAnimationFrame(step);else reveal()})(t0)}
+new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){o.disconnect();setTimeout(autoScratch,500)}},{threshold:.6}).observe(sc);
+sc.addEventListener("pointerdown",e=>{auto=false;draw=true;sc.setPointerCapture(e.pointerId);sp(e)});
+sc.addEventListener("pointermove",e=>{if(draw)sp(e)});
+sc.addEventListener("pointerup",()=>{draw=false;chk()});
+sc.addEventListener("pointercancel",()=>{draw=false});
+addEventListener("resize",()=>{if(!done)initS()});
+</script>
+</body>
+</html>
